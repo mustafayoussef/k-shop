@@ -1,0 +1,38 @@
+<div class="home">
+    <ng-container class="slider">
+        <p-carousel [value]="cover">
+            <ng-template let-cover pTemplate="item">
+                <img src="../../../assets/images/deal.png" alt="">
+            </ng-template>
+        </p-carousel>
+    </ng-container>
+
+    <div class="cards">
+        <div class="grid">
+            <div class="col-12 md:col-6 lg:col-3">
+                <div class="mini-title">
+                    <h3>منتجات تصفحتها مؤخرا</h3>
+                </div>
+                <div class="mini-cards">
+                    <div class="grid">
+                        <div class="col-12" *ngFor="let product of miniProducts">
+                            <app-mini-card [miniProduct]="product"></app-mini-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 md:col-6 lg:col-9">
+                <div class="title">
+                    <h3>وصل حديثا</h3>
+                    <span class="line"></span>
+                    <button pButton pRipple type="button" label="عرض الكل" class="p-button-outlined p-button-info"></button>
+                </div>
+                <div class="grid">
+                    <div class="col-12 md:col-12 lg:col-3" *ngFor="let product of products">
+                        <app-card [product]="product"></app-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

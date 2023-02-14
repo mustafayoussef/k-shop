@@ -1,0 +1,37 @@
+<header>
+    <nav class="first-nav">
+        <div class="grid">
+            <div class="col-12 md:col-2 lg:col-1 nav-item">
+                <a routerLink="/">
+                    <img src="assets/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 md:col-6 lg:col-9 nav-item">
+                <div class="p-fluid">
+
+                    <span class="p-input-icon-right">
+                        <i class="pi pi-search"></i>
+                        <input type="text" pInputText placeholder="عم تبحث ؟" />
+                    </span>
+                </div>
+            </div>
+            <div class="col-12 md:col-4 lg:col-2 content nav-item">
+                <a routerLink="/profile">
+                    <span class="profile"><img src="assets/images/person.png" alt=""></span>
+                </a>
+                <a routerLink="/cart">
+                    <span class="cart">سلة التسوق <span class="icon"><img src="assets/images/cart.png" alt=""></span></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar">
+        <ul class="navbar-links">
+            <li><a>الأقسام</a></li>
+            <li routerLinkActive="active"><a routerLink="/home" >الرئيسية</a></li>
+            <li><a routerLink="/cart">قائمة الأمنيات</a></li>
+            <li><a routerLink="/cart">تواصل معنا</a></li>
+            <li><a routerLink="/cart">من نحن</a></li>
+        </ul>
+    </nav>
+</header>

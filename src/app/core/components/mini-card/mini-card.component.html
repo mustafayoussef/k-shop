@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="image">
+        <img [src]="miniProduct.image" alt="">
+        <div class="label">
+            <p>جديد</p>
+        </div>
+    </div>
+    <div class="content">
+        <h4 class="title">  {{str | slice:0:19}}</h4>
+        <p class="old-price">150.00 ج.م</p>
+        <p class="new-price">90.00 ج.م</p>
+
+        <div class="btns">
+            <button pButton pRipple type="button" class="p-button-rounded p-button-text p-button-plain btn-cart">
+                <img src="assets/images/add2.png" alt="">
+            </button>
+            <button pButton pRipple type="button" icon="pi pi-heart" class="p-button-rounded p-button-secondary p-button-text like"></button>
+            <button pButton pRipple type="button" icon="pi pi-share-alt" class="p-button-rounded p-button-secondary p-button-text share"></button>
+        </div>
+    </div>
+</div>

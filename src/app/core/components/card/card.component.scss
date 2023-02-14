@@ -1,0 +1,112 @@
+@import '../../../../assets/scss/colors';
+
+.btn {
+    height: 24px;
+    width: 24px;
+}
+
+.card {
+    width: 297px;
+    height: 455px;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px 1px #00000052;
+    position: relative;
+
+    // margin-right: 20px;
+    .image {
+        height: 261px;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 11px;
+        left: 16px;
+        height: 32px;
+        width: 58px;
+        background-color: $primaryAccent;
+        color: $white;
+        border-radius: 16px;
+    }
+
+    .content {
+        padding: 0 16px;
+
+        .title {
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-33) var(--unnamed-font-family-cairo);
+            margin: 15px 0 10px;
+        }
+
+        .starts {
+
+            ::ng-deep .p-rating .p-rating-icon {
+                cursor: auto;
+            }
+        }
+
+        .old-price,
+        .new-price {
+            margin: 0;
+        }
+
+        .old-price {
+            color: $primary;
+            text-decoration: line-through;
+            font: normal normal normal 18px/33px Cairo;
+        }
+
+        .new-price {
+            font: normal normal bold 16px/30px Cairo;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 10px;
+            padding-bottom: 1rem;
+
+            .btn-cart {
+                background-color: $primary;
+                border-color: $primary;
+                height: 36px;
+                width: 169px;
+                padding: 5px 9px;
+                text-align: start;
+
+                img {
+                    margin-left: 10px;
+                }
+            }
+
+            .share,
+            .like {
+                @extend .btn;
+            }
+
+            .share {
+                margin-right: 31px;
+            }
+
+            .like {
+                margin-right: 16px;
+            }
+        }
+    }
+
+    @media screen and (min-width:320px) and (max-width:768px) {
+        margin: auto;
+    }
+
+    @media screen and (min-width:769px) and (max-width:992px) {
+        margin: auto;
+    }
+}

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~primeflex/primeflex.css';
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/lara-light-blue/theme.css';
+@import '~primeng/resources/primeng.min.css';
+@import './assets/scss/colors';
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+}
+
+.container {
+    margin: .5rem;
+    padding: .5rem;
+}
+
+a {
+    font: normal normal normal 16px/30px Cairo;
+    letter-spacing: 0px;
+    text-decoration: none;
+    color: $primary;
+
+    &:active {
+        color: $secondary;
+    }
+}

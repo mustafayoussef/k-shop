@@ -1,0 +1,108 @@
+@import '../../../../assets/scss/colors';
+
+.btn {
+    height: 24px;
+    width: 24px;
+}
+
+.card {
+    display: flex;
+    width: 329px;
+    height: 143px;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px 1px #00000052;
+
+    .image {
+        position: relative;
+        width: 129px;
+        height: 140px;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 11px;
+        left: 16px;
+        height: 32px;
+        width: 58px;
+        background-color: $primaryAccent;
+        color: $white;
+        border-radius: 16px;
+    }
+
+    .content {
+        padding: 0 16px;
+
+        .title {
+            font: normal normal normal 18px/33px Cairo;
+            margin: 9px 0 5px;
+        }
+
+        .old-price,
+        .new-price {
+            margin: 0;
+        }
+
+        .old-price {
+            color: $primary;
+            // text-decoration: line-through;
+            font: normal normal normal 18px/33px Cairo;
+            position: relative;
+            white-space: nowrap;
+
+            &::after {
+                border-top: 1px solid $primary;
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 50%;
+                left: 0;
+                width: 50%;
+            }
+        }
+
+        .new-price {
+            font: normal normal bold 16px/30px Cairo;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 1rem;
+
+            .btn-cart {
+                padding: 0;
+
+                img {
+                    margin-left: 10px;
+                }
+            }
+
+            .share,
+            .like {
+                @extend .btn;
+            }
+
+            .share {
+                margin-right: 16px;
+            }
+
+            .like {
+                margin-right: 4rem;
+            }
+        }
+    }
+
+    @media screen and (min-width:320px) and (max-width:768px) {
+        margin: auto;
+    }
+}

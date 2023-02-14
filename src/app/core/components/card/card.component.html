@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="image">
+        <img [src]="product.image" alt="">
+    </div>
+    <div class="label" [ngStyle]="{'background-color': !product.oldPrice ? '1.3rem 0' : '0'}">
+        <p>{{product.label}}</p>
+    </div>
+    <div class="content">
+        <h4 class="title">  {{product.title| slice:0:28}}</h4>
+        <div class="starts" [ngStyle]="{'margin': !product.oldPrice ? '1.3rem 0' : '0'}">
+            <p-rating [readonly]="true" [cancel]="false" [iconOnStyle]="{'color':'#ffe621'}" [iconOffStyle]="{'color':'#eaeaea'}" [(ngModel)]="product.stars"></p-rating>
+        </div>
+        <p *ngIf="product.oldPrice" class="old-price">{{product.oldPrice | currency:'':''}} ج.م</p>
+        <p class="new-price">{{product.newPrice | currency:'':''}} ج.م</p>
+
+        <div class="btns">
+            <button class="btn-cart" pButton type="button" label="أضف للسلة" >
+                <img src="assets/images/add.png" alt="">
+            </button>
+            <button pButton pRipple type="button" icon="pi pi-share-alt" class="p-button-rounded p-button-secondary p-button-text share"></button>
+            <button pButton pRipple type="button" icon="pi pi-heart" class="p-button-rounded p-button-secondary p-button-text like"></button>
+        </div>
+    </div>
+</div>

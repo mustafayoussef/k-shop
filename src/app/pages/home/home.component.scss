@@ -1,0 +1,76 @@
+@import '../../../assets/scss/colors';
+
+.home {
+    background-color: $background;
+
+    ::ng-deep .p-carousel-container {
+        flex-direction: row-reverse !important;
+    }
+
+    ::ng-deep .p-carousel .p-carousel-indicators {
+        display: none;
+    }
+
+    img {
+        width: 100vw;
+    }
+
+    .cards {
+        padding: 3rem 10rem;
+
+        .mini-title {
+            margin-bottom: 2.5rem;
+
+            h3 {
+                margin: 0;
+                font: normal normal normal 18px/33px Cairo;
+            }
+        }
+
+        .title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2.5rem;
+
+            h3 {
+                font: normal normal normal 24px/45px Cairo;
+                margin: 0;
+            }
+
+            .line {
+                background-color: #B7AECA;
+                height: 2px;
+                width: 81%;
+            }
+        }
+
+        @media screen and (min-width:320px) and (max-width:768px) {
+            padding: 0;
+
+            .mini-title {
+                margin-top: 1rem;
+                text-align: center;
+            }
+
+            .title {
+                margin: 2.5rem 2rem;
+
+                .line {
+                    width: 25%;
+                }
+            }
+        }
+
+        @media screen and (min-width:769px) and (max-width:992px) {
+            padding: 3rem;
+
+            .title {
+                .line {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}

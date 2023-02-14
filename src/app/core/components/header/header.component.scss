@@ -1,0 +1,103 @@
+@import '../../../../assets/scss/colors';
+
+.color {
+    background-color: $background;
+    color: $primary;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    overflow: hidden;
+    margin-top: 2rem;
+
+    .first-nav {
+        padding: 0 3rem 0 4rem;
+        margin-bottom: 1.75rem;
+
+        .content {
+            @extend .flex;
+
+            .profile {
+                @extend .color;
+                @extend .flex;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                margin-right: 14px;
+                border-radius: 10px;
+
+                i {
+                    padding: 7px;
+                    width: 24;
+                    height: 24px;
+                }
+            }
+
+            .cart {
+                @extend .color;
+                @extend .flex;
+                justify-content: space-around;
+                height: 40px;
+                width: 162px;
+                margin-right: 15px;
+                border-radius: 10px;
+
+            }
+        }
+
+        @media screen and (min-width:320px) and (max-width:768px) {
+            .nav-item {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    .navbar {
+        @extend .color;
+        @extend .flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        height: 53px;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        &-links {
+            display: block;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+                display: inline-flex;
+                margin-right: 15px;
+                width: 115px;
+                height: 53px;
+                align-items: center;
+
+                a {
+                    margin: auto;
+                }
+            }
+
+            .active {
+                background-color: #00000033;
+                font: normal normal bold 16px/24px Cairo;
+            }
+        }
+
+        @media screen and (min-width:320px) and (max-width:768px) {
+            height: auto;
+
+            &-links {
+                li {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
